@@ -1,9 +1,32 @@
 .post-wrapper {
 	padding: 10px;
 	border-radius: 10px;
-	width: 45%;
+	width: 50%;
 	margin-left: 20%;
 	background-color: var(--post-background);
+}
+
+.post-wrapper-full {
+	padding: 10px;
+	border-radius: 10px;
+	width: 70%;
+	margin-left: 20%;
+	height: 400px;
+	background-color: var(--post-background);
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px) {
+	.post-wrapper {
+		width: 90%;
+		margin-left: 0%;
+	}
+
+	.post-wrapper-full {
+		width: 100%;
+		margin-left: 0%;
+	}
 }
 
 .post-content {
@@ -16,12 +39,10 @@
 	margin-top: 10px;
 }
 
-.post-board {
-	margin-left: 79%;
-	margin-bottom: 2%;
-	margin-top: -7%;
-}
-
 .post-title {
 	width: 64%;
+}
+
+.post-attachment {
+	border-radius: 10px;
 }

@@ -2,39 +2,6 @@ extends layout
 
 block content
 	-user = user || {}
-	div(class='drawer p-2')
-		div(class='drawer-top')
-			button(class='mx-1 drawer-close text-2xl px-2 pr-3' onclick='closeDrawer()') &times;
-			p(class='drawer-title inline text-2xl font-black') PogNet
-		div(class='drawer-main flex flex-col text-center justify-between')
-			a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' href='/') Home
-			a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' href='/new/post') New Post
-			a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' href='/new/board') New Board
-			a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' id="settings-mobile" href='/settings/me') Settings
-			button(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' id='signout' onclick='signout()') Sign Out
-	div(class='nav')
-		div(class='nav-full')
-			div(class='nav-items flex justify-between')
-				p(class='px-2 m-2 font-black tracking-widest text-gray-200 hover:text-gray-300') PogNet
-				a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/') Home
-				a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/new/post') New Post
-				a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/new/board') New Board
-				a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' id='settings' href='/settings/me') Settings
-				div(class='px-2 m-2 spacer')
-				div(class='px-2 m-2')
-					div(class='theme-switch-wrapper')
-						label(class='theme-switch' for='checkbox')
-							input(type='checkbox' id='checkbox')
-							div(class='slider round')
-				div(class='px-2 m-2 spacer')
-				button(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300 border-transparent hover:border-white' id="signout-full" onclick='signout()') Sign Out
-		div(class='nav-mobile')
-			div(class='nav-items flex justify-between')
-				button(class='flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white' onclick='showDrawer()')
-					svg(class='fill-current h-3 w-3' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
-						title Menu
-						path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
-				p(class='text-2xl text-center font-heavy') PogNet
 	if user
 		div(class="banner-wrapper" class='mr-24 centered-pw')
 			div(class='inner-banner' class='w-full')
@@ -42,7 +9,41 @@ block content
 			img(class="profile-picture profile-img rounded-full h-32 w-32 border-solid border-8 float-left inline" height="128" width="128" src="")
 			h1(class='profile-title text-3xl')= user.username
 			p(class='profile-bio')= user.bio
-		div(class='profile-divider-25')
+			div(class='profile-divider')
+			div(class='drawer p-2')
+				div(class='drawer-top')
+					button(class='mx-1 drawer-close text-2xl px-2 pr-3' onclick='closeDrawer()') &times;
+					p(class='drawer-title inline text-2xl font-black') PogNet
+				div(class='drawer-main flex flex-col text-center justify-between')
+					a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' href='/') Home
+					a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' href='/new/post') New Post
+					a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' href='/new/board') New Board
+					a(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' id="settings-mobile" href='/settings/me') Settings
+					button(class='px-2 m-2 text-lg font-light tracking-widest text-gray-200' id='signout' onclick='signout()') Sign Out
+			div(class='nav')
+				div(class='nav-full')
+					div(class='nav-items flex justify-between')
+						p(class='px-2 m-2 font-black tracking-widest text-gray-200 hover:text-gray-300 nav-title') PogNet
+						a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/') Home
+						a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/new/post') New Post
+						a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/new/board') New Board
+						a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' id='settings' href='/settings/me') Settings
+						div(class='px-2 m-2 spacer')
+						div(class='px-2 m-2')
+							div(class='theme-switch-wrapper')
+								label(class='theme-switch' for='checkbox')
+									input(type='checkbox' id='checkbox')
+									div(class='slider round')
+						div(class='px-2 m-2 spacer')
+						button(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300 border-transparent hover:border-white' id="signout-full" onclick='signout()') Sign Out
+				div(class='nav-mobile')
+					div(class='nav-items flex justify-between')
+						button(class='flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white' onclick='showDrawer()')
+							svg(class='fill-current h-3 w-3' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+								title Menu
+								path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
+						p(class='text-2xl text-center font-heavy nav-title') PogNet
+		div(class='profile-divider')
 		div(class='post-container')
 		div(class='profile-divider')
 		script(src='/js/load-feed.js')

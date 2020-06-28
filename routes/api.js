@@ -27,9 +27,11 @@ router.get('/boards/all', (req, res) => {
 
 router.get('/board/:boardId', (req, res) => {
 	Board.findOne({ _id: req.params.boardId }).then(board => {
+		if(!board) return res.send({ msg: `Couldn't Find Board`, code: 10061 })
 		res.send(board)
 	}).catch(err => {
-		res.send(err)
+		console.log(err)
+		res.send({ msg: 'Couldn\'t find board', code: 10060 })
 	})
 })
 
@@ -95,6 +97,24 @@ router.get('/post/:postId', (req, res) => {
 	})
 })
 
+router.get('/delete/post/:postId', (req, res) => {
+	Post.findOneAndDelete({ _id: req.params.postId }).then(post => {
+		if(!post) return res.send({ msg: `Couldn't Find Post`, code: 10071 })
+		res.send({ msg: `Successfully deleted post.` })
+	}).catch(err => {
+		res.send({ msg: `Couldn't Delete Post`, code: 10070 })
+	})
+})
+
+router.get('/delete/board/:boardId', (req, res) => {
+	Board.findOneAndDelete({ _id: req.params.boardId }).then(board => {
+		if(!board) return res.send({ msg: `Couldn't Find Board`, code: 10081 })
+		res.send({ msg: `Successfully deleted board.` })
+	}).catch(err => {
+		res.send({ msg: `Couldn't Delete Post`, code: 10080 })
+	})
+})
+
 router.get('/search/title/:query', (req, res) => {
 	Post.aggregate([{ $match: { title: new RegExp(`${req.params.query}`, 'gi') } }]).then(posts => {
 		if(!posts) res.send({ msg: `Couldn't find a post with the text query: ${req.params.query}`, code: 10030 })
@@ -116,9 +136,11 @@ router.get('/search/body/:query', (req, res) => {
 // MARK: Private API entrypoints
 router.get('/user/:userId', (req, res) => {
 	User.findOne({ _id: req.params.userId }).then(user => {
+		if(!user) return res.send({ msg: 'No User Found', code: 10051 })
 		res.send(user)
 	}).catch(err => {
-		res.send(err)
+		console.log(err)
+		res.send({ msg: 'Error Finding User', code: 10050 })
 	})
 })
 

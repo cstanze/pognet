@@ -12,6 +12,21 @@ const postSchema = new mongoose.Schema({
   body: {
     type: String
   },
+  hasImage: {
+    type: Boolean
+  },
+  image: {
+    type: String
+  },
+  hasVideo: {
+    type: Boolean
+  },
+  video: {
+    type: String
+  },
+  videoMime: {
+    type: String
+  },
   _epoch: {
     type: String
   },

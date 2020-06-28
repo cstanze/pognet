@@ -14,7 +14,7 @@ block content
   div(class='nav')
     div(class='nav-full')
       div(class='nav-items flex justify-between')
-        p(class='px-2 m-2 font-black tracking-widest text-gray-200 hover:text-gray-300') PogNet
+        p(class='px-2 m-2 font-black tracking-widest text-gray-200 hover:text-gray-300 nav-title') PogNet
         a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/') Home
         a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/new/post') New Post
         a(class='px-2 m-2 font-light tracking-widest text-gray-200 hover:text-gray-300' href='/new/board') New Board
@@ -33,7 +33,7 @@ block content
           svg(class='fill-current h-3 w-3' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
             title Menu
             path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
-        p(class='text-2xl text-center font-heavy') PogNet
+        p(class='text-2xl text-center font-heavy nav-title') PogNet
   if users.length
     table.listing-table.table-dark.table-striped
       tr

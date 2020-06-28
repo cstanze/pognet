@@ -44,6 +44,9 @@ const userSchema = new mongoose.Schema({
   },
   _admin: {
     type: Boolean
+  },
+  subscriptions: {
+    type: [String]
   }
 })
 

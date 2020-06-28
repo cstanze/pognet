@@ -212,19 +212,30 @@ router.get('/new/post', (req, res) => {
 	res.render('new-post', { title: 'New Post', form_title: 'New Post'})
 })
 
-router.post('/new/post', [
+router.post('/new/post', postDir.single('image'), [
 	body('title').isLength({ min: 1 }).withMessage('Wait! You need a title for your post!'),
 	body('body').isLength({ min: 1 }).withMessage(`I can't let you post without a post body.`),
 	body('board').isLength({ min: 1 }).withMessage(`You must post to a board.`),
-	body('userId').isLength({ min: 1 }).withMessage(`You must be logged in to post.`)
+	body('userId').isLength({ min: 1 }).withMessage(`You must be logged in to post.`),
 ], (req, res) => {
 	const errors = validationResult(req)
 	if(errors.isEmpty()) {
+    let hasImage = false
+    let hasVideo = false
+    if(typeof req.file != 'undefined') {
+      if(/image\//gi.test(req.file.mimetype)) hasImage = true
+      if(/video\//gi.test(req.file.mimetype)) hasVideo = true
+    }
 		const post = new Post({
 			  title: req.body.title,
 			  body: req.body.body,
 			  _epoch: new Date().toDateString(),
 			  tags: [],
+        hasImage,
+        image: hasImage ? (typeof req.file != 'undefined' ? `images/posts/${req.file.filename}` : ``) : ``,
+        hasVideo,
+        video: hasVideo ? (typeof req.file != 'undefined' ? `images/posts/${req.file.filename}` : ``) : ``,
+        videoMime: hasVideo ? (typeof req.file != 'undefined' ? req.file.mimetype : ``) : ``,
 			  _author: req.body.userId,
 			  _board: req.body.board,
 			  nsfw: typeof req.body.nsfw != 'undefined' ? true : false,
@@ -235,10 +246,10 @@ router.post('/new/post', [
 
 		post.save().then(post => {
 			Board.findOneAndUpdate({ _id: post._board }, { $push: { posts: post._id }, $set: { _latestPost: post._id } }).then(board => {
-				board._postCount = String(Number(board._postCount)+1)
+				if(board != null) board._postCount = String(Number(board._postCount)+1)
 				board.save().then(board => {
 					User.findOneAndUpdate({ _id: req.body.userId }, { $push: { posts: post._id } }).then(user => {
-						user._postCount = String(Number(user._postCount)+1)
+						if(user != null) user._postCount = String(Number(user._postCount)+1)
 						user.save().then(user => {
 							res.redirect('/')
 							io.emit('posted', post)
@@ -271,7 +282,7 @@ router.get('/board/:boardName', (req, res) => {
 		res.render('board', { title: board.displayName, board: { displayName: board.displayName, _id: board._id } })
 	}).catch(err => {
 		console.log(err)
-		res.render('500', { title: '500 Internal Server Error' })	
+		res.render('500', { title: '500 Internal Server Error' })
 	})
 })
 
@@ -289,7 +300,68 @@ router.get('/settings/me', (req, res) => {
 	res.render('settings', { title: 'Settings' })
 })
 
+router.get('/post/:postId', (req, res) => {
+  Post.findOne({ _id: req.params.postId }).then(post => {
+    if(!post) return res.render('404', { title: '404 - Post Not Found' })
+    console.log(post)
+    Board.findOne({ _id: post._board }).then(board => {
+      if(!board) return res.render('404', { title: '404 - Post Not Found' })
+      res.render('post', { title: `${post.title} - ${board.displayName}`, post })
+    }).catch(err => {
+      console.log(err)
+      res.render('500', { title: '500' })
+    })
+  }).catch(err => {
+    console.log(err)
+    res.render('500', { title: '500' })
+  })
+})
+
+router.get('/board/:boardId/settings', (req, res) => {
+  res.render('board-settings', { title: 'Board Settings' })
+})
+
+router.post('/board/:boardId/subscribe/:userId',(req, res) => {
+  Board.findOne({ _id: req.params.boardId }).then(board => {
+    User.findOneAndUpdate({ _id: req.params.userId }, { $push: { subscriptions: `${board._id}` } }).then(user => {
+      res.send({ msg: `Subscribed successfully!`, code: 20040 })
+    }).catch(err => {
+      console.log(err)
+      res.send({ msg: `Couldn't Find/Update a user with the id: ${req.params.userId}.`, code: 10041 })
+    })
+  }).catch(err => {
+    console.log(err)
+    res.send({ msg: `Couldn't Subscribe to board with id: ${req.params.boardId}.`, code: 10040 })
+  })
+})
+
 // MARK: Private, user-protected routes
+
+router.patch('/settings/board/icon/:boardId', boarDir.single('icon'), (req, res) => {
+  // ! Not Too Safe But It Works
+  Board.findOneAndUpdate({ _id: req.params.boardId}, { $set: { _profile: `images/board_profile/${req.file.filename}`} }, { new: true }).then(board => {
+    // ! This is very dangerous. This allows for MITM snatching of... things....
+    res.send(board)
+  }).catch(err => {
+    console.log(err)
+    // FIXME Send more than just the status
+    // - Might want to open up to the public but I'm not sure yet.
+    res.sendStatus(500)
+  })
+})
+
+router.patch('/settings/board/reset/icon/:boardId', (req, res) => {
+  // ! Not Too Safe But It Works
+  Board.findOneAndUpdate({ _id: req.params.boardId }, { $set: { _profile: `images/board_profile/default.png`} }, { new: true }).then(board => {
+    // ! This is very dangerous. This allows for MITM snatching of... things....
+    res.send(board)
+  }).catch(err => {
+    console.log(err)
+    // FIXME Send more than just the status
+    // - Might want to open up to the public but I'm not sure yet.
+    res.sendStatus(500)
+  })
+})
 
 router.patch('/settings/photo/:userId', profDir.single('photo'), (req, res) => {
 	// ! Not Too Safe But It Works

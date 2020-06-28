@@ -15,5 +15,6 @@
 
 #error {
   color: #fff;
+  font-size: 60px;
   text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
 }
