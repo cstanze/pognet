@@ -1,0 +1,75 @@
+.nav {
+  max-height: 120px;
+  width: 100%;
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 15px;
+  margin-top: 2% !important;
+  padding: 15px;
+  background-color: #222222;
+}
+
+.nav-divider {
+  background-color: rgba(255, 255, 255, 0.55); 
+  /*background-color: rgba(85, 85, 85, 0.55);*/
+  width: 2px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: -5px;
+  position: fixed;
+}
+
+.nav-divider-controls {
+  margin-left: 82.5%;
+  transition: 5s cubic-bezier(0.85, 0, 0.15, 1);
+  /*
+   * EaseInOutCirc: cubic-bezier(0.85, 0, 0.15, 1)
+   * EaseInOutExpo: cubic-bezier(0.87, 0, 0.13, 1)
+   */
+}
+
+.nav-hide {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.item {
+  opacity: 0;
+}
+
+.spacer {
+  content: ' ';
+}
+
+.nav-mobile {
+  display: none;
+}
+
+/* Drawer Styles */
+
+.drawer {
+  background-color: #333333;
+  /*height: 100vh;*/
+  display: none;
+  transition: 3s ease-out;
+  border-radius: 5px;
+  position: absolute;
+  width: 92%;
+}
+
+/* Responsive Styles */
+
+/* iPhone 6, 7, 8, X and iPhone 6, 7, 8 Plus Styles (Omit Device Pixel Ratio) */
+/* Enable Orientation Only If Needed */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+/*and (orientation: portrait)*/ {
+  .nav-full {
+    display: none !important;
+  }
+  .nav-mobile {
+    display: block;
+  }
+}

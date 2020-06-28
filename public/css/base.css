@@ -1,0 +1,142 @@
+body {
+  padding: 40px 10px;
+  background-color: var(--body-background);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.listing-reg h1 {
+  /*text-align: center;*/
+  /*margin: 0 0 2rem;*/
+}
+
+/* Transition Classes */
+p {
+  transition: 0s;
+}
+
+/* CSS Base Classes */
+
+.centered {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.centered-pw {
+  text-align: center;
+  display: block;
+  width: 200%;
+  margin-left: -36.5%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  /*margin-right: auto;*/
+  /*margin-left: auto;*/
+  margin-left: 5%;
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (orientation: portrait) {
+  .container {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 570px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 990px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1190px;
+  }
+}
+
+/* CSS for registration form and errors */
+
+.form-control:focus {
+  outline: none !important;
+}
+
+.form-registration {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.form-registration input {
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form-registration .btn {
+  flex: 1 0 100%;
+}
+
+.errors {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2rem;
+  display: table;
+}
+
+.errors li {
+  margin: 0 0 1rem;
+}
+
+.error li:before {
+  content: "! Error : ";
+  font-weight: bold
+}
+
+/* Styles for listing table */
+.listing-table {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.listing-table th,
+.listing-table td {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+
+.listing-table th {
+  background: #000;
+  color: #fff;
+}
+
+.listing-table td,
+.listing-table th {
+  border-right: 1px solid #666;
+}

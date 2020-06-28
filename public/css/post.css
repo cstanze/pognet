@@ -1,0 +1,27 @@
+.post-wrapper {
+	padding: 10px;
+	border-radius: 10px;
+	width: 45%;
+	margin-left: 20%;
+	background-color: var(--post-background);
+}
+
+.post-content {
+	border-radius: 5px;
+	padding: 10px;
+	background-color: var(--post-content);
+}
+
+.post-wrapper:not(:first-child) {
+	margin-top: 10px;
+}
+
+.post-board {
+	margin-left: 79%;
+	margin-bottom: 2%;
+	margin-top: -7%;
+}
+
+.post-title {
+	width: 64%;
+}

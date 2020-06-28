@@ -1,0 +1,21 @@
+*:not(textarea) {
+	transition: 0.4s ease-in-out;
+}
+
+:root {
+	--body-background: #111111;
+	--text-primary: #fff;
+	--post-background: #1a1a1b;
+	--post-content: #33353d;
+	--switch-thumb: #33353d;
+	--switch-background: #e0e0e0;
+}
+
+[data-theme="dark"] {
+	--body-background: #e0e0e0;
+	--text-primary: #19191a;
+	--post-background: #c5c5d4;
+	--post-content: #adb2c9;
+	--switch-thumb: #bfc4d6;
+	--switch-background: #111111;
+}

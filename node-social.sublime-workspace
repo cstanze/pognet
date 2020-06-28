@@ -1,0 +1,892 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"baclk",
+				"background-color\tproperty"
+			],
+			[
+				"text",
+				"text-gray-200"
+			],
+			[
+				"draw",
+				"drawerShown"
+			],
+			[
+				"S",
+				"SF-Pro-Display-Bold"
+			],
+			[
+				"6h",
+				"6h20v2H0v-2z"
+			],
+			[
+				"6h20",
+				"6h20v2H0V9zm0"
+			],
+			[
+				"flex-",
+				"flex-grow"
+			],
+			[
+				"border",
+				"border-white"
+			],
+			[
+				"shadow",
+				"shadow-outline"
+			],
+			[
+				"overflow",
+				"overflow-x\tproperty"
+			],
+			[
+				"blink",
+				"blinkMax"
+			],
+			[
+				"rebli",
+				"reblinkProbability"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"avatr",
+				"avatarBlob"
+			],
+			[
+				"avatar",
+				"avatarBlob"
+			],
+			[
+				"avat",
+				"avatarBlob"
+			],
+			[
+				"data",
+				"dataUrl"
+			],
+			[
+				"find",
+				"findOneAndUpdate"
+			],
+			[
+				"bcr",
+				"bcrypt"
+			],
+			[
+				"settings",
+				"settings-picture"
+			],
+			[
+				"prof",
+				"profDir"
+			],
+			[
+				"por",
+				"profilePicture"
+			],
+			[
+				"prif",
+				"profilePicture"
+			],
+			[
+				"profile",
+				"profilePicture"
+			],
+			[
+				"get",
+				"getItem"
+			],
+			[
+				"p",
+				"photoUrl"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"tra",
+				"translateY()\ttransform"
+			],
+			[
+				"trams",
+				"transform\tproperty"
+			],
+			[
+				"pattern",
+				"patternUnits"
+			],
+			[
+				"user",
+				"userField"
+			],
+			[
+				"is",
+				"isLength"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"theme-swi",
+				"theme-switch-wrapper"
+			],
+			[
+				"button",
+				"buttonTheme"
+			],
+			[
+				"form",
+				"form-registration"
+			],
+			[
+				"ste",
+				"setAttribute"
+			],
+			[
+				"document",
+				"documentElement"
+			],
+			[
+				"docu",
+				"documentElement"
+			],
+			[
+				"background-cl",
+				"background-color\tproperty"
+			],
+			[
+				"transla",
+				"translateX()\ttransform"
+			],
+			[
+				"tran",
+				"transition\tproperty"
+			],
+			[
+				"Even",
+				"EventSettings"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 11836,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/api.js",
+			"settings":
+			{
+				"buffer_size": 3686,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/load-posts.js",
+			"settings":
+			{
+				"buffer_size": 1919,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/layout.pug",
+			"settings":
+			{
+				"buffer_size": 1018,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/home.pug",
+			"settings":
+			{
+				"buffer_size": 2574,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/new-post.pug",
+			"settings":
+			{
+				"buffer_size": 3911,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"color",
+				"Colored Comments: Generate Color Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"generate color scheme",
+				"Colored Comments: Generate Color Scheme"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"words",
+				"HighlightWords: Highlight Words"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"color sc",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"theme",
+				"Colored Comments: Generate Color Scheme"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Arithmetic"
+			],
+			[
+				"colors",
+				"Colored Comments: Generate Color Scheme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 426.0,
+		"history":
+		[
+			"view.settings()",
+			"help",
+			"view.settings().help()",
+			"view.settings()",
+			"view.settings().get(\"color_scheme.comments\")",
+			"view.settings().get(\"color_scheme.comments\"",
+			"view.settings().get(\"comments\")",
+			"view.settings().get(\"comment\")",
+			"view.settings().get(\"color_scheme\")"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/constanze amalie/Developer/node-social",
+		"/C/Users/constanze amalie/Developer/node-social/models",
+		"/C/Users/constanze amalie/Developer/node-social/public",
+		"/C/Users/constanze amalie/Developer/node-social/public/css",
+		"/C/Users/constanze amalie/Developer/node-social/routes",
+		"/C/Users/constanze amalie/Developer/node-social/views"
+	],
+	"file_history":
+	[
+		"/C/Users/constanze amalie/Developer/node-social/.gitignore",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/base.css",
+		"/C/Users/constanze amalie/Developer/node-social/views/new-post.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/new-board.pug",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/buttons.css",
+		"/C/Users/constanze amalie/Developer/node-social/views/signup.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/settings.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/registers.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/profile.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/board.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/login.pug",
+		"/C/Users/constanze amalie/Developer/node-social/views/home.pug",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/colors.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/post.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/nav-controls.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/navigation.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/socket.io.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/fonts.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/load-posts.js",
+		"/C/Users/constanze amalie/Developer/node-social/views/layout.pug",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/settings-setup.js",
+		"/C/Users/constanze amalie/Developer/node-social/node_modules/tailwindcss/stubs/defaultConfig.stub.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/board.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/fetch-board-banner.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/profile.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/fetch-banner.js",
+		"/C/Users/constanze amalie/Developer/node-social/routes/api.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/load-board-feed.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/load-feed.js",
+		"/C/Users/constanze amalie/Developer/node-social/views/404-board.pug",
+		"/C/Users/constanze amalie/Developer/node-social/package.json",
+		"/C/Users/constanze amalie/Developer/node-social/package-lock.json",
+		"/C/Users/constanze amalie/Developer/node-social/views/500.pug",
+		"/C/Users/constanze amalie/Developer/node-social/app.js",
+		"/C/Users/constanze amalie/Developer/node-social/views/404.pug",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/404.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/404.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/404-overrides.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/buttons.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/settings.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/settings.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/overrides.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/bootstrap.min.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/load-profile-posts.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/form-control.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/fetch-profile.js",
+		"/C/Users/constanze amalie/Developer/node-social/start.js",
+		"/C/Users/constanze amalie/AppData/Roaming/Sublime Text 3/Packages/Colored Comments/colored_comments.sublime-settings",
+		"/C/Users/constanze amalie/AppData/Roaming/Sublime Text 3/Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+		"/C/Users/constanze amalie/AppData/Roaming/Sublime Text 3/Monokai.sublime-color-scheme",
+		"/C/Users/constanze amalie/AppData/Roaming/Sublime Text 3/Packages/ColorSchemeEditor/screenshots/screen1.png",
+		"/C/Users/constanze amalie/Developer/node-social/node_modules/base64-to-image/test/test.js",
+		"/C/Users/constanze amalie/Developer/node-social/node-social.sublime-project",
+		"/C/Users/constanze amalie/AppData/Roaming/Sublime Text 3/Packages/User/colored_comments.sublime-settings",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/limit-bio.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/grab-color-image.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/user-applicate.js",
+		"/C/Users/constanze amalie/Developer/node-social/models/Post.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/board-listings.js",
+		"/C/Users/constanze amalie/Developer/node-social/models/Board.js",
+		"/C/Users/constanze amalie/Developer/node-social/models/User.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/switch.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/dark-switch.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/js/apply-redir.js",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/dark-switch.css",
+		"/C/Users/constanze amalie/Developer/node-social/public/css/bootstrap.css",
+		"/C/Users/constanze amalie/Developer/rust2d/src/main.rs",
+		"/C/Users/constanze amalie/Developer/rust2d/src/lib.rs",
+		"/C/Users/constanze amalie/Developer/rust2d/Cargo.toml",
+		"/C/Users/constanze amalie/Developer/voxel/Main.java",
+		"/C/Users/constanze amalie/Downloads/T7hw3/Engine/Game.h",
+		"/C/Users/constanze amalie/Downloads/T7hw3/Engine/Game.cpp",
+		"/C/Users/constanze amalie/Downloads/T7hw3/Engine/Graphics.cpp",
+		"/C/Users/constanze amalie/Downloads/Beginner Tutorial 6 HW Code/Engine/Game.h",
+		"/C/Users/constanze amalie/Downloads/Beginner Tutorial 6 HW Code/Engine/Game.cpp",
+		"/C/Users/constanze amalie/Downloads/Beginner Tutorial 5 HW Code/Engine/Game.h",
+		"/C/Users/constanze amalie/Downloads/Beginner Tutorial 5 HW Code/Engine/Game.cpp",
+		"/C/Users/constanze amalie/Downloads/Beginner Tutorial 3 HW Code/Engine/Game.cpp",
+		"/C/Users/constanze amalie/AppData/Local/Temp/Temp1_Beginner Tutorial 3 HW Code.zip/Beginner Tutorial 3 HW Code/Engine/Game.cpp",
+		"/C/Users/constanze amalie/Developer/graphics/main.cpp"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 107.0,
+		"where_history":
+		[
+			"-*/node_modules/*",
+			"!node_modules",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"!\")",
+			"bold italic",
+			"#",
+			"bold italic",
+			"#",
+			"-bold italic",
+			"bold italic",
+			"#",
+			"bold italic",
+			"#",
+			"bold italic",
+			" *",
+			"//",
+			"SF Pro",
+			" -",
+			"item",
+			"font-",
+			"italic",
+			"bold",
+			"container",
+			" ;",
+			"light",
+			"heavy",
+			"px-4",
+			"up",
+			"ettings",
+			"font-",
+			" hover:text-underline",
+			"div",
+			"1",
+			"item1",
+			" m-2",
+			"m-2",
+			"3",
+			"display: none;",
+			"md",
+			"err",
+			"{\n",
+			"banner",
+			"()\n",
+			"socket",
+			"500",
+			"404",
+			");",
+			"form-control",
+			"span",
+			"form-contro",
+			"form-control",
+			"2",
+			"if(buttonTheme == `dark`) {\n\t\t\tconst buttons = document.getElementsByClassName(\"btn\");\n\t\t\tconsole.log(buttons)\n\t\t\tfor(let i=0;i<buttons.length;i++) {\n\t\t\t\tlet el = buttons[i];\n\t\t\t\tif(el.getAttribute(\"aria-link\") != 'true') {\n\t\t\t\t\tel.classList.remove(\"bg-black\")\n\t\t\t\t\tel.classList.remove(\"text-black\")\n\t\t\t\t\tel.classList.add(\"bg-white\")\n\t\t\t\t\tel.classList.add(\"text-black\")\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tconst buttons = document.getElementsByClassName(\"btn\");\n\t\t\tconsole.log(buttons)\n\t\t\tfor(let i=0;i<buttons.length;i++) {\n\t\t\t\tlet el = buttons[i];\n\t\t\t\tif(el.getAttribute(\"aria-link\") != 'true') {\n\t\t\t\t\tel.classList.remove(\"bg-white\")\n\t\t\t\t\tel.classList.remove('text-black')\n\t\t\t\t\tel.classList.add('bg-black')\n\t\t\t\t\tel.classList.add('text-white')\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t} else {\n\t\tconst buttons = document.getElementsByClassName(\"btn\");\n\t\tconsole.log(buttons)\n\t\tfor(let i=0;i<buttons.length;i++) {\n\t\t\tlet el = buttons[i];\n\t\t\tif(el.getAttribute(\"aria-link\") != 'true') {\n\t\t\t\tel.classList.remove(\"bg-white\")\n\t\t\t\tel.classList.remove('text-black')\n\t\t\t\tel.classList.add(\"bg-black\")\n\t\t\t\tel.classList.add(\"text-white\")\n\t\t\t}\n\t\t}\n\t}",
+			"64",
+			"24",
+			"/-",
+			"-",
+			"Bio",
+			"true",
+			"5px",
+			"home",
+			"username",
+			"patch",
+			"post",
+			"`\n",
+			"profile",
+			"photo",
+			"gi",
+			"image"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11836,
+						"regions":
+						{
+							"fixme":
+							{
+								"flags": 16,
+								"icon": "Packages/Colored Comments/icons/dots.png",
+								"regions":
+								[
+									[
+										10695,
+										10733
+									],
+									[
+										10738,
+										10798
+									],
+									[
+										11176,
+										11214
+									],
+									[
+										11219,
+										11279
+									],
+									[
+										11642,
+										11680
+									],
+									[
+										11685,
+										11745
+									]
+								],
+								"scope": "colored.comments.color.fixme"
+							},
+							"important":
+							{
+								"flags": 16,
+								"icon": "Packages/Colored Comments/icons/dots.png",
+								"regions":
+								[
+									[
+										10392,
+										10420
+									],
+									[
+										10566,
+										10635
+									],
+									[
+										10890,
+										10918
+									],
+									[
+										11047,
+										11116
+									],
+									[
+										11366,
+										11394
+									],
+									[
+										11513,
+										11582
+									]
+								],
+								"scope": "colored.comments.color.important"
+							},
+							"mark":
+							{
+								"flags": 16,
+								"icon": "Packages/Colored Comments/icons/dots.png",
+								"regions":
+								[
+									[
+										787,
+										848
+									],
+									[
+										10269,
+										10306
+									]
+								],
+								"scope": "colored.comments.color.mark"
+							},
+							"todo":
+							{
+								"flags": 16,
+								"icon": "Packages/Colored Comments/icons/dots.png",
+								"regions":
+								[
+									[
+										1096,
+										1147
+									],
+									[
+										11778,
+										11810
+									]
+								],
+								"scope": "colored.comments.color.todo"
+							}
+						},
+						"selection":
+						[
+							[
+								8365,
+								8365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4037.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes/api.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/load-posts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1919,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1032,
+								1032
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/layout.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/home.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								338,
+								338
+							],
+							[
+								1037,
+								1037
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/new-post.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Pug/Syntaxes/Pug.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 41.0
+	},
+	"input":
+	{
+		"height": 221.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 138.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "node-social.sublime-project",
+	"replace":
+	{
+		"height": 414.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,29 @@
+.settings-section {
+	border-radius: 10px;
+	border: solid 1px #aaa;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 15px;
+}
+
+.settings-submit {
+	margin-top: 10px;
+}
+
+/*.settings-picture {
+	color: white;
+	border-radius: 50%;
+	width: 128px;
+	max-width: 128px;
+	height: 128px;
+	max-height: 128px;
+	display: inline;
+	margin-right: 2%;
+	float: left;
+	margin-top: 0.65%;
+}*/
+
+.settings-input {
+	max-width: 330px;
+	border-radius: 10px;
+}

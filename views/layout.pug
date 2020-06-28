@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		title= `${title}`
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		script(src="/js/jquery.min.js")
+		script(src="/js/popper.min.js")
+		script(src="/js/bootstrap.min.js")
+		script(src="/js/fontawesome.js")
+		script(src="/js/socket.io.js")
+		link(rel="stylesheet", href="/css/tailwind.min.css")
+		link(rel="stylesheet", href="/css/fonts.css")
+		link(rel="stylesheet", href="/css/colors.css")
+		link(rel="stylesheet", href="/css/base.css")
+		link(rel="stylesheet", href="/css/buttons.css")
+		link(rel="stylesheet", href="/css/post.css")
+		link(rel="stylesheet", href="/css/profile.css")
+		link(rel="stylesheet", href="/css/settings.css")
+		link(rel="stylesheet", href="/css/board.css")
+		link(rel="stylesheet", href="/css/dark-switch.css")
+		link(rel="stylesheet", href="/css/navigation.css")
+		link(rel="stylesheet", href="/css/404.css")
+		link(rel="stylesheet", href="/css/overrides.css")
+	body.container.listing-reg
+		block content
+		script(src="/js/dark-switch.js")

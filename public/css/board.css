@@ -1,0 +1,8 @@
+.board-title {
+	color: white;
+	margin-block-start: 5px;
+	margin-block-end: 5px;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	transform: translateY(10px);
+}
