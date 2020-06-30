@@ -38,6 +38,15 @@ block content
 	p(class='text-4xl mb-2 font-regular home-title') Home
 	div(class='profile-divider-25')
 	div(class='post-container')
+	div(class='snackbar' id='delete-bar')
+		i(class='fas fa-trash inline px-2')
+		p(class='text-xl inline') Successfully deleted post!
+	div(class='snackbar' id='upgrade-bar')
+		i(class='fas fa-level-up-alt inline px-2')
+		p(class='text-xl inline') Post author is now a mod of the post board!
 	div(class='profile-divider')
+	script(src='/js/post-actions.js')
 	script(src='/js/load-posts.js')
 	script(src='/js/nav-controls.js')
+	
+	// - <div id="snackbar">Some text some message..</div>

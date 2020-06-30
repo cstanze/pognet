@@ -3,11 +3,13 @@ extends layout
 block content
 	-board = board || {}
 	input(type='hidden' id="boardId" value=board._id)
+	input(type='hidden' id="boardIconUrl" value=board._profile)
 	div(class="banner-wrapper" class='mr-24 centered-pw')
 		div(class='inner-banner' class='w-full')
 	div(class='overlay')
-		img(class="profile-picture profile-img rounded-full h-32 w-32 border-solid border-8 float-left inline" height="128" width="128" src="/images/profile/constanze.png")
-		h1(class='board-title text-4xl')= board.displayName
+		img(class="profile-picture board-picture profile-img rounded-full h-32 w-32 border-solid border-8 float-left inline" height="128" width="128")
+		h1(class='profile-title text-4xl')= board.displayName
+		div(class='profile-divider')
 	div(class='profile-divider')
 	div(class='drawer p-2')
 		div(class='drawer-top')
@@ -47,7 +49,16 @@ block content
 	div(class='profile-divider')
 	div(class='feed-container')
 	div(class='profile-divider')
+	div(class='snackbar' id='delete-bar')
+		i(class='fas fa-trash inline px-2')
+		p(class='text-xl inline') Successfully deleted post!
+	div(class='snackbar' id='upgrade-bar')
+		i(class='fas fa-level-up-alt inline px-2')
+		p(class='text-xl inline') Post author is now a mod of the post board!
+	div(class='profile-divider')
+	script(src='/js/post-actions.js')
 	script(src='/js/load-board-feed.js')
+	script(src='/js/board-picture.js')
 	script(src='/js/fetch-board-banner.js')
 	script(src='/js/nav-controls.js')
 	script(src='/js/board-permissions.js')

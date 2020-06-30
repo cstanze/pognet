@@ -7,6 +7,8 @@
 	--text-primary: #fff;
 	--post-background: #1a1a1b;
 	--post-content: #33353d;
+	--post-toolbar: #42454f;
+	--post-icons: #fff;
 	--switch-thumb: #33353d;
 	--switch-background: #e0e0e0;
 }
@@ -16,6 +18,8 @@
 	--text-primary: #19191a;
 	--post-background: #c5c5d4;
 	--post-content: #adb2c9;
+	--post-toolbar: #c8cee6;
+	--post-icons: #19191a;
 	--switch-thumb: #bfc4d6;
 	--switch-background: #111111;
 }

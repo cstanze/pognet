@@ -35,6 +35,18 @@ and (max-device-width: 812px) {
 	background-color: var(--post-content);
 }
 
+.post-toolbar {
+	border-radius: 5px;
+	padding: 2.5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: var(--post-toolbar);
+}
+
+.post-icon {
+	color: var(--post-icons);
+}
+
 .post-wrapper:not(:first-child) {
 	margin-top: 10px;
 }

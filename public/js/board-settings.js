@@ -17,10 +17,10 @@ submitPhoto = async () => {
 	})
 }
 
-resetPhotot = async () => {
+resetPhoto = async () => {
   fetch(`/settings/board/reset/icon/${settingsServerId}`, {
     method: 'PATCH'
   }).then(json => { return json.json() }).then(board => {
-    document.querySelector('.settings-picture').src = `/${profile._profile}`
+    document.querySelector('.settings-picture').src = `/${board._profile}`
   })
 }

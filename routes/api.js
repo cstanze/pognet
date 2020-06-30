@@ -59,6 +59,14 @@ router.get('/pfp/:username', (req, res) => {
 	})
 })
 
+router.get('/icon/:boardname', (req, res) => {
+	Board.findOne({ username: req.params.boardname }).then(user => {
+		res.send({ url: `/${user._profile}` })
+	}).catch(err => {
+		res.send(err)
+	})
+})
+
 router.get('/posts/all', (req, res) => {
 	Post.find({}).then(posts => {
 		res.send(posts.reverse())

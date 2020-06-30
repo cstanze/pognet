@@ -1,0 +1,99 @@
+.upvote {
+  filter: grayscale(100%);
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  transition: 0s;
+}
+
+.downvote {
+  filter: grayscale(100%);
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  transition: 0s;
+}
+
+.upvote.activated {
+  filter: grayscale(0%);
+  animation: upvote 0.1s, upvoteRemove 0.15s 0.1s;
+  transition: 0s;
+}
+
+.downvote.activated {
+  filter: grayscale(0%);
+  animation: downvote 0.1s, downvoteRemove 0.15s 0.1s;
+  transition: 0s;
+}
+
+@keyframes downvote {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes downvoteRemove {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes upvote {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes upvoteRemove {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes downvote {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes downvoteRemove {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes upvote {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@-webkit-keyframes upvoteRemove {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

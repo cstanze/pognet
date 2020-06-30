@@ -6,7 +6,7 @@ block content
 		div(class="banner-wrapper" class='mr-24 centered-pw')
 			div(class='inner-banner' class='w-full')
 		div(class='overlay')
-			img(class="profile-picture profile-img rounded-full h-32 w-32 border-solid border-8 float-left inline" height="128" width="128" src="")
+			img(class="profile-picture profile-img rounded-full h-32 w-32 border-solid border-8 float-left inline" height="128" width="128")
 			h1(class='profile-title text-3xl')= user.username
 			p(class='profile-bio')= user.bio
 			div(class='profile-divider')
@@ -46,6 +46,14 @@ block content
 		div(class='profile-divider')
 		div(class='post-container')
 		div(class='profile-divider')
+		div(class='snackbar' id='delete-bar')
+			i(class='fas fa-trash inline px-2')
+			p(class='text-xl inline') Successfully deleted post!
+		div(class='snackbar' id='upgrade-bar')
+			i(class='fas fa-level-up-alt inline px-2')
+			p(class='text-xl inline') Post author is now a mod of the post board!
+		div(class='profile-divider')
+		script(src='/js/post-actions.js')
 		script(src='/js/load-feed.js')
 		script(src='/js/grab-color-image.js')
 		script(src='/js/fetch-banner.js')

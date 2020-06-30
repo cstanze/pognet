@@ -50,6 +50,9 @@ const postSchema = new mongoose.Schema({
   },
   sticky: {
     type: Boolean
+  },
+  votes: {
+    type: String
   }
 })
 

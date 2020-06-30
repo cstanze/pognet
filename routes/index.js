@@ -151,14 +151,13 @@ router.get(`/new/board`, (req, res) => {
 router.post('/new/board', [
 	body('displayName').isLength({ min: 1 }).withMessage(`Hmm... You don't have a display name for your board.`),
 	body('displayName').isLength({ max: 32 }).withMessage(`The display name is too long!`),
-	body(`desc`).isLength({ min: 1 }).withMessage(`You need a description for your board.`),
 	body(`userId`).isLength({ min: 1 }).withMessage(`You need to login before creating a board.`)
 ],(req, res) => {
 	const errors = validationResult(req)
 	if(errors.isEmpty()) {
 		const board = new Board({
 			displayName: req.body.displayName,
-			desc: req.body.desc,
+			desc: "",
 			_posts: [],
 			_creator: req.body.userId,
 			_postCount: '0',
@@ -226,7 +225,7 @@ router.post('/new/post', postDir.single('image'), [
       if(/image\//gi.test(req.file.mimetype)) hasImage = true
       if(/video\//gi.test(req.file.mimetype)) hasVideo = true
     }
-		const post = new Post({
+		let post = new Post({
 			  title: req.body.title,
 			  body: req.body.body,
 			  _epoch: new Date().toDateString(),
@@ -241,7 +240,8 @@ router.post('/new/post', postDir.single('image'), [
 			  nsfw: typeof req.body.nsfw != 'undefined' ? true : false,
 			  approved: true,
 			  modPost: false,
-			  sticky: false
+			  sticky: false,
+        votes: "1"
 		})
 
 		post.save().then(post => {
@@ -279,7 +279,7 @@ router.post('/new/post', postDir.single('image'), [
 router.get('/board/:boardName', (req, res) => {
 	Board.findOne({ displayName: req.params.boardName }).then(board => {
 		if(!board) return res.render('404-board', { title: 'Board Not Found' })
-		res.render('board', { title: board.displayName, board: { displayName: board.displayName, _id: board._id } })
+		res.render('board', { title: board.displayName, board: { displayName: board.displayName, _id: board._id, _profile: board._profile, desc: board.desc } })
 	}).catch(err => {
 		console.log(err)
 		res.render('500', { title: '500 Internal Server Error' })
@@ -337,6 +337,32 @@ router.post('/board/:boardId/subscribe/:userId',(req, res) => {
 
 // MARK: Private, user-protected routes
 
+router.get('/upvote/:postId/', (req, res) => {
+  Post.findOne({ _id: req.params.postId }).then(post => {
+    post.votes = String(Number(post.votes) + 1)
+    post.save().then(pst => {
+      if(!pst) res.send({ msg: `Couldn't find the post to upvote.`, code: 10090 })
+      res.send(pst)
+    })
+  }).catch(err => {
+    console.log(err)
+    res.send(err)
+  })
+})
+
+router.get('/downvote/:postId/', (req, res) => {
+  Post.findOne({ _id: req.params.postId }).then(post => {
+    post.votes = String(Number(post.votes) - 1)
+    post.save().then(pst => {
+      if(!pst) res.send({ msg: `Couldn't find the post to downvote.`, code: 10091 })
+      res.send(pst)
+    })
+  }).catch(err => {
+    console.log(err)
+    res.send(err)
+  })
+})
+
 router.patch('/settings/board/icon/:boardId', boarDir.single('icon'), (req, res) => {
   // ! Not Too Safe But It Works
   Board.findOneAndUpdate({ _id: req.params.boardId}, { $set: { _profile: `images/board_profile/${req.file.filename}`} }, { new: true }).then(board => {
@@ -359,6 +385,16 @@ router.patch('/settings/board/reset/icon/:boardId', (req, res) => {
     console.log(err)
     // FIXME Send more than just the status
     // - Might want to open up to the public but I'm not sure yet.
+    res.sendStatus(500)
+  })
+})
+
+router.post('/settings/board/push/mods', (req, res) => {
+  console.log(req.body)
+  Board.findOneAndUpdate({ _id: req.body.boardId }, { $push: { _mods: req.body.userId } }, { new: true }).then(board => {
+    res.send(board)
+  }).catch(err => {
+    console.log(err)
     res.sendStatus(500)
   })
 })
